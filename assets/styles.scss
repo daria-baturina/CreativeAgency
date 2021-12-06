@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(45deg, transparent 3%, rgba(255, 255, 255, 0.05) 3%, rgba(255, 255, 255, 0.05) 50%, transparent 50%),
+    linear-gradient(45deg, transparent calc(3% + 50px), rgba(255, 255, 255, 0.05) calc(3% + 50px), rgba(255, 255, 255, 0.05) calc(50% + 50px), transparent calc(50% + 50px)),
+    linear-gradient(45deg, transparent calc(3% + 100px), rgba(255, 255, 255, 0.05) calc(3% + 100px), rgba(255, 255, 255, 0.05) calc(50% + 100px), transparent calc(50% + 100px)),
+    linear-gradient(45deg, transparent calc(3% + 150px), rgba(255, 255, 255, 0.05) calc(3% + 150px), rgba(255, 255, 255, 0.05) calc(50% + 150px), transparent calc(50% + 150px)),
+    url("img/background.png"), linear-gradient(black, black);
+    background-size: cover;
+}
+
+.menu {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    line-height: 48px;
+    color: #ffffff;
+    font-weight: 300;
+    text-align: right;
+    transform: rotate(45deg);
+}
