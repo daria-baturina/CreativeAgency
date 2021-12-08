@@ -12,13 +12,6 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-/* Убираем внутренние отступы */
-ul[class],
-ol[class] {
-    padding: 0;
-}
-
-/* Убираем внешние отступы */
 body,
 h1,
 h2,
@@ -36,30 +29,18 @@ dd {
     margin: 0;
 }
 
-/* Выставляем основные настройки по-умолчанию для body */
 body {
-    //scroll-behavior: smooth;
-    //width: 100%;
     height: 100vh;
 }
 
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-ul[class],
-ol[class] {
-    list-style: none;
-}
-
-/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
     text-decoration-skip-ink: auto;
 }
 
-/* Упрощаем работу с изображениями */
 img {
     max-width: 100%;
     display: block;
 }
-
 
 .wrapper {
     height: 100%;
@@ -89,6 +70,10 @@ img {
     left: 100px;
     &__button {
         cursor: pointer;
+        transition: transform 0.5s ease-out 0s;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }
 
@@ -106,7 +91,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-/*    margin-right: -128px;*/
     height: 256px;
     width: 256px;
     background-image: url("img/logoBack.png");
@@ -232,13 +216,8 @@ i {
 }
 
 .switcher {
-/*    background-image: url("img/buttonsBack.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto auto;*/
     height: 67px;
     width: 67px;
-    //margin-left: -26px;
     z-index: 2;
     display: flex;
     flex-direction: row;
