@@ -72,22 +72,21 @@ img {
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .menu {
     display: flex;
     flex-direction: column;
     font-size: 20px;
-    line-height: 48px;
+    line-height: 50px;
     color: #ffffff;
     font-weight: 300;
     text-align: right;
     transform: rotate(45deg);
     position: absolute;
     z-index: 2;
-    top: -10px;
-    left: 85px;
+    top: -25px;
+    left: 100px;
     &__button {
         cursor: pointer;
     }
@@ -98,7 +97,7 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding-top: 100px;
+    flex: 1 0 auto;
 }
 
 .logo {
@@ -107,12 +106,14 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: -128px;
+/*    margin-right: -128px;*/
     height: 256px;
     width: 256px;
     background-image: url("img/logoBack.png");
     background-repeat: no-repeat;
     background-position: center;
+    position: absolute;
+    left: -128px;
     &__company {
         margin-top: -15px;
         font-size: 72px;
@@ -137,11 +138,6 @@ main {
     justify-content: center;
     align-items: center;
     position: relative;
-    //height: 476px;
-    //width: 476px;
-    //border: 9px solid rgba(255,255,255,0.17);
-    //transform: rotate(45deg);
-    //z-index: 1;
     &__boarder {
         border: 9px solid rgba(255,255,255,0.17);
         transform: rotate(45deg);
@@ -166,7 +162,50 @@ main {
         }
     }
     &__info {
-
+        height: 476px;
+        width: 476px;
+        background-color: white;
+        position: relative;
+        overflow: hidden;
+        display: none;
+        &_title{
+            position: absolute;
+            transform: rotate(-45deg);
+            height: 140%;
+            width: 140%;
+            top: -20%;
+            left: -20%;
+            font-size: 40px;
+            font-family: "Open Sans", serif;
+            font-weight: 700;
+            text-align: center;
+            padding-top: 25%;
+        }
+        &_text{
+            top: -20%;
+            left: -20%;
+            position: absolute;
+            height: 140%;
+            width: 140%;
+            transform: rotate(-45deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 28%;
+            &-bold {
+                font-size: 13px;
+                line-height: 22px;
+                font-weight: 700;
+                margin-bottom: 22px;
+                font-family: "Open Sans", serif;
+            }
+            &-simple {
+                font-size: 13px;
+                line-height: 22px;
+                font-family: "Open Sans", serif;
+            }
+        }
     }
 }
 
@@ -175,38 +214,52 @@ i {
     border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 4px;
+    position: absolute;
+    top: -5px;
+    cursor: pointer;
 }
 
 .right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
+    left: -30px;
 }
 
 .left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
+    left: 20px;
 }
 
 .switcher {
-    background-image: url("img/buttonsBack.png");
+/*    background-image: url("img/buttonsBack.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto auto;
+    background-size: auto auto;*/
     height: 67px;
     width: 67px;
-    margin-left: -26px;
+    //margin-left: -26px;
     z-index: 2;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    left: calc(100% - 25px);
     &__button {
-        width: 50%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        &-left {
-            justify-content: end;
+        border: 33px solid transparent;
+        position: relative;
+        &-leftInactive {
+            border-right: 33px solid rgb(0%, 0%, 0%, 0.2);
+        }
+        &-leftActive {
+            border-right: 33px solid rgb(0%, 0%, 0%, 1);
+        }
+        &-rightInactive {
+            border-left: 33px solid rgb(0%, 0%, 0%, 0.2);
+        }
+        &-rightActive {
+            border-left: 33px solid rgb(0%, 0%, 0%, 1);
         }
     }
 }
@@ -222,7 +275,6 @@ footer {
     .socialnetworks {
         display: flex;
         flex-direction: row;
-        padding-left: 92px;
         &__link {
             background-color: white;
             border-radius: 90px;
