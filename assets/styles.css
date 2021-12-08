@@ -121,13 +121,15 @@ main {
 .centralItem__boarder {
   border: 9px solid rgba(255, 255, 255, 0.17);
   transform: rotate(45deg);
+  position: relative;
 }
 .centralItem__img {
   height: 476px;
   width: 476px;
   background-color: #cc9a70;
-  position: relative;
+  position: absolute;
   overflow: hidden;
+  transition: opacity 1s ease-in-out;
 }
 .centralItem__img_girl {
   top: -20%;
@@ -147,7 +149,8 @@ main {
   background-color: white;
   position: relative;
   overflow: hidden;
-  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 .centralItem__info_title {
   position: absolute;
