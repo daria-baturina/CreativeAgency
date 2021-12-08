@@ -1,13 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(){
     const leftButton = document.querySelector('.switcher').children[0];
     const rightButton = document.querySelector('.switcher').children[1];
-    const girlScreen = document.querySelector('.centralItem__img');
     const textScreen = document.querySelector('.centralItem__info');
-
-    console.log(leftButton);
-    console.log(rightButton);
-    console.log(girlScreen);
-    console.log(textScreen);
 
     rightButton.addEventListener('click',() => {
         if (rightButton.classList.contains("switcher__button-rightActive")) {
