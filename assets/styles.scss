@@ -31,6 +31,34 @@ dd {
 
 body {
     height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(45deg, transparent 3%, rgba(255, 255, 255, 0.05) 3%, rgba(255, 255, 255, 0.05) 50%, transparent 50%),
+    linear-gradient(45deg, transparent calc(3% + 3.57vw), rgba(255, 255, 255, 0.05) calc(3% + 3.57vw), rgba(255, 255, 255, 0.05) calc(50% + 3.57vw), transparent calc(50% + 3.57vw)),
+    linear-gradient(45deg, transparent calc(3% + 7.14vw), rgba(255, 255, 255, 0.05) calc(3% + 7.14vw), rgba(255, 255, 255, 0.05) calc(50% + 7.14vw), transparent calc(50% + 7.14vw)),
+    linear-gradient(45deg, transparent calc(3% + 10.71vw), rgba(255, 255, 255, 0.05) calc(3% + 10.71vw), rgba(255, 255, 255, 0.05) calc(50% + 10.71vw), transparent calc(50% + 10.71vw)),
+    url("img/background.png"), linear-gradient(black, black);
+    background-size: cover;
+    @media screen and (min-width: 1401px) {
+        background-image: linear-gradient(45deg, transparent 3%, rgba(255, 255, 255, 0.05) 3%, rgba(255, 255, 255, 0.05) 50%, transparent 50%),
+        linear-gradient(45deg, transparent calc(3% + 50px), rgba(255, 255, 255, 0.05) calc(3% + 50px), rgba(255, 255, 255, 0.05) calc(50% + 50px), transparent calc(50% + 50px)),
+        linear-gradient(45deg, transparent calc(3% + 100px), rgba(255, 255, 255, 0.05) calc(3% + 100px), rgba(255, 255, 255, 0.05) calc(50% + 100px), transparent calc(50% + 100px)),
+        linear-gradient(45deg, transparent calc(3% + 150px), rgba(255, 255, 255, 0.05) calc(3% + 150px), rgba(255, 255, 255, 0.05) calc(50% + 150px), transparent calc(50% + 150px)),
+        url("img/background.png"), linear-gradient(black, black);
+}
+    @media (max-width: 700px) {
+        background-image: linear-gradient(45deg, transparent 3%, rgba(255, 255, 255, 0.05) 3%, rgba(255, 255, 255, 0.05) 50%, transparent 50%),
+        linear-gradient(45deg, transparent calc(3% + 5vw), rgba(255, 255, 255, 0.05) calc(3% + 5vw), rgba(255, 255, 255, 0.05) calc(50% + 5vw), transparent calc(50% + 5vw)),
+        linear-gradient(45deg, transparent calc(3% + 10vw), rgba(255, 255, 255, 0.05) calc(3% + 10vw), rgba(255, 255, 255, 0.05) calc(50% + 10vw), transparent calc(50% + 10vw)),
+        linear-gradient(45deg, transparent calc(3% + 15vw), rgba(255, 255, 255, 0.05) calc(3% + 15vw), rgba(255, 255, 255, 0.05) calc(50% + 15vw), transparent calc(50% + 15vw)),
+        url("img/background.png"), linear-gradient(black, black);
+    }
+    @media (max-width: 500px) {
+        background-image: linear-gradient(45deg, transparent 3%, rgba(255, 255, 255, 0.05) 3%, rgba(255, 255, 255, 0.05) 80%, transparent 80%),
+        linear-gradient(45deg, transparent calc(3% + 5vw), rgba(255, 255, 255, 0.05) calc(3% + 5vw), rgba(255, 255, 255, 0.05) calc(80% + 5vw), transparent calc(80% + 5vw)),
+        linear-gradient(45deg, transparent calc(3% + 10vw), rgba(255, 255, 255, 0.05) calc(3% + 10vw), rgba(255, 255, 255, 0.05) calc(80% + 10vw), transparent calc(80% + 10vw)),
+        linear-gradient(45deg, transparent calc(3% + 15vw), rgba(255, 255, 255, 0.05) calc(3% + 15vw), rgba(255, 255, 255, 0.05) calc(80% + 15vw), transparent calc(80% + 15vw)),
+        url("img/background.png"), linear-gradient(black, black);
+    }
 }
 
 a:not([class]) {
@@ -45,29 +73,38 @@ img {
 .wrapper {
     height: 100%;
     margin: 0 auto;
-    background-image: linear-gradient(45deg, transparent 3%, rgba(255, 255, 255, 0.05) 3%, rgba(255, 255, 255, 0.05) 50%, transparent 50%),
-    linear-gradient(45deg, transparent calc(3% + 50px), rgba(255, 255, 255, 0.05) calc(3% + 50px), rgba(255, 255, 255, 0.05) calc(50% + 50px), transparent calc(50% + 50px)),
-    linear-gradient(45deg, transparent calc(3% + 100px), rgba(255, 255, 255, 0.05) calc(3% + 100px), rgba(255, 255, 255, 0.05) calc(50% + 100px), transparent calc(50% + 100px)),
-    linear-gradient(45deg, transparent calc(3% + 150px), rgba(255, 255, 255, 0.05) calc(3% + 150px), rgba(255, 255, 255, 0.05) calc(50% + 150px), transparent calc(50% + 150px)),
-    url("img/background.png"), linear-gradient(black, black);
-    background-size: cover;
     display: flex;
     flex-direction: column;
+    max-width: 1400px;
 }
 
 .menu {
     display: flex;
     flex-direction: column;
-    font-size: 20px;
-    line-height: 50px;
+    font-size: 1.43vw;
+    line-height: 3.57vw;
     color: #ffffff;
     font-weight: 300;
     text-align: right;
-    transform: rotate(45deg);
     position: absolute;
     z-index: 2;
-    top: -25px;
-    left: 100px;
+    left: 22%;
+    top: -6%;
+    transform: rotate(45deg);
+    @media screen and (min-width: 1401px) {
+        font-size: 20px;
+        line-height: 50px;
+    }
+    @media (max-width: 700px) {
+        font-size: 2vw;
+        line-height: 5vw;
+    }
+    @media (max-width: 500px) {
+        font-size: 4vw;
+        line-height: 10vw;
+        left: 6%;
+        top: -12%;
+    }
     &__button {
         cursor: pointer;
         transition: transform 0.5s ease-out 0s;
@@ -83,6 +120,10 @@ main {
     align-items: center;
     justify-content: center;
     flex: 1 0 auto;
+    margin-bottom: -123px;
+    @media screen and (max-width: 600px) {
+        margin-bottom: -147px;
+    }
 }
 
 .logo {
@@ -91,45 +132,89 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 256px;
-    width: 256px;
+    height: 36.5%;
+    width: 36.5%;
     background-image: url("img/logoBack.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
     position: absolute;
-    left: -128px;
+    left: -15%;
+    @media (max-width: 500px) {
+        height: 50%;
+        width: 50%;
+        left: 0;
+        top: 73%;
+    }
     &__company {
-        margin-top: -15px;
-        font-size: 72px;
-        letter-spacing: -5px;
+        margin-top: -1.07vw;
+        font-size: 5.14vw;
+        letter-spacing: -0.36vw;
         color: #f5b23d;
         font-weight: 300;
         font-family: "TwCen", serif;
+        @media screen and (min-width: 1401px) {
+            font-size: 72px;
+            margin-top: -15px;
+            letter-spacing: -5px;
+        }
+        @media (max-width: 700px) {
+            margin-top: -1.5vw;
+            font-size: 7.2vw;
+            letter-spacing: -0.5vw;
+        }
+        @media (max-width: 500px) {
+            font-size: 10vw;
+        }
     }
-    &__name {
-        margin-top: -15px;
-        font-size: 20px;
-        color: #ffffff;
-        font-weight: 300;
-        text-transform: uppercase;
+        &__name {
+            margin-top: -1.07vw;
+            font-size: 1.42vw;
+            color: #ffffff;
+            font-weight: 300;
+            text-transform: uppercase;
+            @media screen and (min-width: 1401px) {
+                font-size: 20px;
+                margin-top: -15px;
+            }
+            @media (max-width: 700px) {
+                margin-top: -1.5vw;
+                font-size: 2vw;
+            }
+            @media (max-width: 500px) {
+                font-size: 2.8vw;
+            }
+        }
     }
-}
 
 .centralItem {
-    height: 674px;
-    width: 674px;
+    height: 50vw;
+    max-height: 700px;
+    width: 50vw;
+    max-width: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    @media (max-width: 700px) {
+        height: 70vw;
+        width: 70vw;
+    }
+    @media (max-width: 500px) {
+        height: 90vw;
+        width: 90vw;
+        margin-bottom: 150px;
+    }
     &__boarder {
         border: 9px solid rgba(255,255,255,0.17);
         transform: rotate(45deg);
         position: relative;
+        height: 68%;
+        width: 68%;
     }
     &__img {
-        height: 476px;
-        width: 476px;
+        height: 100%;
+        width: 100%;
         background-color: #cc9a70;
         position: absolute;
         overflow: hidden;
@@ -148,8 +233,8 @@ main {
         }
     }
     &__info {
-        height: 476px;
-        width: 476px;
+        height: 100%;
+        width: 100%;
         background-color: white;
         position: relative;
         overflow: hidden;
@@ -162,11 +247,14 @@ main {
             width: 140%;
             top: -20%;
             left: -20%;
-            font-size: 40px;
+            font-size: 2.85vw;
             font-family: "Open Sans", serif;
             font-weight: 700;
             text-align: center;
             padding-top: 25%;
+            @media screen and (min-width: 1401px) {
+                font-size: 40px;
+            }
         }
         &_text{
             top: -20%;
@@ -179,18 +267,42 @@ main {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 0 28%;
-            &-bold {
+            padding: 35% 35%;
+            font-size: 0.93vw;
+            line-height: 1.57vw;
+            @media screen and (min-width: 1401px) {
                 font-size: 13px;
                 line-height: 22px;
+            }
+            @media screen and (max-width: 700px) {
+                font-size: 1.3vw;
+                line-height: 2.2vw;
+            }
+            &-bold {
                 font-weight: 700;
                 margin-bottom: 22px;
                 font-family: "Open Sans", serif;
+                @media screen and (min-width: 701px) and (max-width: 900px) {
+                    font-size: 1.3vw;
+                    line-height: 2.2vw;
+                    margin-bottom: 0;
+                }
+                @media screen and (min-width: 501px) and (max-width: 700px) {
+                    font-size: 1.82vw;
+                    line-height: 3.08vw;
+                    margin-bottom: 0;
+                }
+                @media screen and (max-width: 500px) {
+                    font-size: 2.55vw;
+                    line-height: 4.31vw;
+                    margin-bottom: 0;
+                }
             }
             &-simple {
-                font-size: 13px;
-                line-height: 22px;
                 font-family: "Open Sans", serif;
+                @media screen and (max-width: 900px) {
+                    display: none;
+                }
             }
         }
     }
@@ -227,7 +339,11 @@ i {
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: calc(100% - 25px);
+    left: calc(100% - 45px);
+    @media (max-width: 500px) {
+        left: 50%;
+        top: -28px;
+    }
     &__button {
         border: 33px solid transparent;
         position: relative;
@@ -252,7 +368,7 @@ footer {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    width: 815px;
+    max-width: 815px;
     padding-bottom: 20px;
     .socialnetworks {
         display: flex;
@@ -276,7 +392,12 @@ footer {
         flex-direction: row;
         width: 100%;
         justify-content: space-between;
-        margin-top: 50px;
+        margin-top: 40px;
+        margin-right: 15px;
+        @media (max-width: 600px) {
+            flex-direction: column;
+            align-items: center;
+        }
         &__copyright {
             font-size: 12px;
             letter-spacing: 0;
